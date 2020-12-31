@@ -9,9 +9,9 @@ public class Players {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int playerId;
-    private String Name;
+    private String name;
     private String HOF;
-    private int Championships;
+    private int championships;
     private int AllStar;
 
 
@@ -24,11 +24,11 @@ public class Players {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String  isHOF() {
@@ -40,11 +40,11 @@ public class Players {
     }
 
     public int getChampionships() {
-        return Championships;
+        return championships;
     }
 
     public void setChampionships(int championships) {
-        Championships = championships;
+        this.championships = championships;
     }
 
     public int getAllStar() {
@@ -52,7 +52,7 @@ public class Players {
     }
 
     public void setAllStar(int allStar) {
-        AllStar = allStar;
+        this.AllStar = allStar;
     }
 
 

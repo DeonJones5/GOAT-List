@@ -1,19 +1,22 @@
 package org.example.GOAT_LIST.Entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table
 public class Stats {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int StatsID;
     private double Points;
     private double Rebounds;
     private double Assist;
     private double Steals;
     private double Blocks;
-    private int PlayerID;
+    private int playerId;
+    private String name;
+
 
     public int getStatsID() {
         return StatsID;
@@ -64,10 +67,17 @@ public class Stats {
     }
 
     public int getPlayerID() {
-        return PlayerID;
+        return playerId;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setPlayerID(int playerID) {
-        PlayerID = playerID;
+        playerId = playerID;
     }
 }
