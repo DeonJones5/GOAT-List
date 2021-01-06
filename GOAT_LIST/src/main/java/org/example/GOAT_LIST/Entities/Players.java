@@ -1,6 +1,9 @@
 package org.example.GOAT_LIST.Entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table
@@ -13,6 +16,10 @@ public class Players {
     private String HOF;
     private int championships;
     private int AllStar;
+
+//    @JsonBackReference(value = "name1")
+//    @OneToMany(mappedBy = "players", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//    private Set<Stats> stats;
 
 
     public int getPlayerId() {
@@ -31,7 +38,7 @@ public class Players {
         this.name = name;
     }
 
-    public String  isHOF() {
+    public String getHOF() {
         return HOF;
     }
 

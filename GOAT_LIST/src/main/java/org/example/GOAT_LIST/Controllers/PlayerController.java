@@ -5,10 +5,7 @@ import org.example.GOAT_LIST.Services.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,6 +29,18 @@ public class PlayerController {
     @GetMapping("playersByChampionships/{championships}")
     public ResponseEntity<List<Players>> playersByChampionships(@PathVariable int championships){
         return new ResponseEntity<>(playerService.findPlayersByChampionships(championships), HttpStatus.OK);
+    }
+
+    @PostMapping("addPlayer")
+    public ResponseEntity<Players> addPlayer(@RequestBody Players players){
+        return new ResponseEntity<>(playerService.addPlayer(players), HttpStatus.CREATED);
+    }
+
+
+
+    @GetMapping("getAllPlayers")
+    public ResponseEntity<List<Players>> getAllPlayers(){
+        return new ResponseEntity(playerService.getAllPlayers(), HttpStatus.OK);
     }
 
 

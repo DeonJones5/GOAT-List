@@ -7,33 +7,33 @@ import javax.persistence.Id;
 public class Skills {
 
     @Id
-    private int SkillsId;
-    private String Primary_Skill;
-    private String Secondary_Skill;
+    private int skillsId;
+    private String primary_Skill;
+    private String secondary_Skill;
     private int playerId;
 
     public int getSkillsId() {
-        return SkillsId;
+        return skillsId;
     }
 
     public void setSkillsId(int skillsId) {
-        SkillsId = skillsId;
+        this.skillsId = skillsId;
     }
 
     public String getPrimary_Skill() {
-        return Primary_Skill;
+        return primary_Skill;
     }
 
     public void setPrimary_Skill(String primary_Skill) {
-        Primary_Skill = primary_Skill;
+        this.primary_Skill = primary_Skill;
     }
 
     public String getSecondary_Skill() {
-        return Secondary_Skill;
+        return secondary_Skill;
     }
 
     public void setSecondary_Skill(String secondary_Skill) {
-        Secondary_Skill = secondary_Skill;
+        this.secondary_Skill = secondary_Skill;
     }
 
     public int getPlayer_Id() {

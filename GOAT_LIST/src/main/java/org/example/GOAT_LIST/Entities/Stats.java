@@ -17,6 +17,11 @@ public class Stats {
     private int playerId;
     private String name;
 
+//    @ManyToOne
+//    @JoinColumn(name = "playerId", nullable = false)
+//    private Players players;
+
+
 
     public int getStatsID() {
         return StatsID;

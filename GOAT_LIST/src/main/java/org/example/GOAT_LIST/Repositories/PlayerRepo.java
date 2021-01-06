@@ -14,6 +14,10 @@ public interface PlayerRepo extends CrudRepository<Players, Integer> {
 
     List<Players> findAllByChampionships(int championships);
 
+    List<Players> findAll();
+
+
+
 //    Players findPlayersByAllStar(int allStar);
 
     }
