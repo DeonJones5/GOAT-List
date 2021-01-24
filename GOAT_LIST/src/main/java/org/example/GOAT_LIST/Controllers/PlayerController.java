@@ -43,6 +43,11 @@ public class PlayerController {
         return new ResponseEntity(playerService.getAllPlayers(), HttpStatus.OK);
     }
 
+    @GetMapping("existByName/{name}")
+    public ResponseEntity<Boolean> existByName(@PathVariable String name){
+        return new ResponseEntity<>(playerService.playerExist(name), HttpStatus.OK);
+    }
+
 
 //    @GetMapping("allStarAppearances/{allStar}")
 //    public ResponseEntity<Players> allStarAppearances(@PathVariable int allStar){

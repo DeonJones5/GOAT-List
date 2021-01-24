@@ -16,6 +16,8 @@ public interface PlayerRepo extends CrudRepository<Players, Long> {
 
     List<Players> findAll();
 
+    Boolean existsByName(String name);
+
 
 
 //    Players findPlayersByAllStar(int allStar);

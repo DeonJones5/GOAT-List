@@ -35,15 +35,10 @@ public class PlayerService {
         return playerRepo.findAll();
     }
 
+    public Boolean playerExist(String name){ return playerRepo.existsByName(name);}
+
 }
 
-//    public List<Players> getAllPlayers(int playerId){
-//        Players players = playerRepo.findPlayersByPlayerId(playerId);
-//
-//        if (players != null) {
-//            return players.getName();
-//        }
-//        return null;
 
 
 //    public Players readPlayersAllStarAppearances(int allStar){
