@@ -10,7 +10,7 @@ public class StatsService {
     @Autowired
     private StatsRepo statsRepo;
 
-    public Stats readStats(int StatsID){
+    public Stats readStats(Long StatsID){
         return statsRepo.findStatsByPlayerId(StatsID);
     }
 

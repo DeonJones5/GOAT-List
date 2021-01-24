@@ -11,7 +11,7 @@ public class Players {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int playerId;
+    private Long playerId;
     private String name;
     private String HOF;
     private int championships;
@@ -22,11 +22,11 @@ public class Players {
 //    private Set<Stats> stats;
 
 
-    public int getPlayerId() {
+    public Long getPlayerId() {
         return playerId;
     }
 
-    public void setPlayerId(int playerId) {
+    public void setPlayerId(Long playerId) {
         this.playerId = playerId;
     }
 

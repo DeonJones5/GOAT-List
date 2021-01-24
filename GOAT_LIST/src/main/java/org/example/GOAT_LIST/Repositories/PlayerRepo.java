@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PlayerRepo extends CrudRepository<Players, Integer> {
-    Players findPlayersByPlayerId(int playerId);
+public interface PlayerRepo extends CrudRepository<Players, Long> {
+    Players findPlayersByPlayerId(Long playerId);
 
     Players findPlayersByName (String name);
 

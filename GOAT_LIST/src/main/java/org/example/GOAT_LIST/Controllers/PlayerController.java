@@ -17,7 +17,7 @@ public class PlayerController {
     private PlayerService playerService;
 
     @GetMapping("read/{playerId}")
-    public ResponseEntity<Players> readById(@PathVariable int playerId){
+    public ResponseEntity<Players> readById(@PathVariable Long playerId){
         return new ResponseEntity<>(playerService.readPlayer(playerId), HttpStatus.OK);
     }
 

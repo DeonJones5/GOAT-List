@@ -7,14 +7,14 @@ import javax.persistence.Id;
 public class Teams {
 
     @Id
-    private int TeamID;
+    private Long TeamID;
     private String Team_Name;
 
-    public int getTeamID() {
+    public Long getTeamID() {
         return TeamID;
     }
 
-    public void setTeamID(int teamID) {
+    public void setTeamID(Long teamID) {
         TeamID = teamID;
     }
 

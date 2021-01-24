@@ -8,13 +8,13 @@ public class Stats {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int StatsID;
+    private Long StatsID;
     private double Points;
     private double Rebounds;
     private double Assist;
     private double Steals;
     private double Blocks;
-    private int playerId;
+    private Long playerId;
     private String name;
 
 //    @ManyToOne
@@ -23,11 +23,11 @@ public class Stats {
 
 
 
-    public int getStatsID() {
+    public Long getStatsID() {
         return StatsID;
     }
 
-    public void setStatsID(int statsID) {
+    public void setStatsID(Long statsID) {
         StatsID = statsID;
     }
 
@@ -71,7 +71,7 @@ public class Stats {
         Blocks = blocks;
     }
 
-    public int getPlayerID() {
+    public Long getPlayerID() {
         return playerId;
     }
     public String getName() {
@@ -82,7 +82,7 @@ public class Stats {
         this.name = name;
     }
 
-    public void setPlayerID(int playerID) {
+    public void setPlayerID(Long playerID) {
         playerId = playerID;
     }
 }

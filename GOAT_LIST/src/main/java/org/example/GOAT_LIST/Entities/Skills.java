@@ -1,46 +1,47 @@
 package org.example.GOAT_LIST.Entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Skills {
 
     @Id
-    private int skillsId;
-    private String primary_Skill;
-    private String secondary_Skill;
-    private int playerId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long skillsId;
+    private String primarySkill;
+    private String secondarySkill;
 
-    public int getSkillsId() {
+    private Long playerId;
+
+    public Long getSkillsId() {
         return skillsId;
     }
 
-    public void setSkillsId(int skillsId) {
+    public void setSkillsId(Long skillsId) {
         this.skillsId = skillsId;
     }
 
-    public String getPrimary_Skill() {
-        return primary_Skill;
+    public String getPrimarySkill() {
+        return primarySkill;
     }
 
-    public void setPrimary_Skill(String primary_Skill) {
-        this.primary_Skill = primary_Skill;
+    public void setPrimarySkill(String primarySkill) {
+        this.primarySkill = primarySkill;
     }
 
-    public String getSecondary_Skill() {
-        return secondary_Skill;
+    public String getSecondarySkill() {
+        return secondarySkill;
     }
 
-    public void setSecondary_Skill(String secondary_Skill) {
-        this.secondary_Skill = secondary_Skill;
+    public void setSecondarySkill(String secondarySkill) {
+        this.secondarySkill = secondarySkill;
     }
 
-    public int getPlayer_Id() {
+    public Long getPlayer_Id() {
         return playerId;
     }
 
-    public void setPlayer_Id(int playerId) {
+    public void setPlayer_Id(Long playerId) {
         this.playerId = playerId;
     }
 }

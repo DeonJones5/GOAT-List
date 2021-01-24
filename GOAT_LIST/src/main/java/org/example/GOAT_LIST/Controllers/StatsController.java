@@ -17,7 +17,7 @@ public class StatsController {
     private StatsService statsService;
 
     @GetMapping("readStats/{StatsID}")
-    public ResponseEntity<Stats> readStats(@PathVariable int StatsID){
+    public ResponseEntity<Stats> readStats(@PathVariable Long StatsID){
         return new ResponseEntity<>(statsService.readStats(StatsID), HttpStatus.OK);
     }
 

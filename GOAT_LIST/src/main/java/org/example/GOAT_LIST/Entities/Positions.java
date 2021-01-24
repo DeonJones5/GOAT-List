@@ -7,14 +7,14 @@ import javax.persistence.Id;
 public class Positions {
 
     @Id
-    private int PositionId;
+    private Long PositionId;
     private String Position;
 
-    public int getPositionId() {
+    public Long getPositionId() {
         return PositionId;
     }
 
-    public void setPositionId(int positionId) {
+    public void setPositionId(Long positionId) {
         PositionId = positionId;
     }
 

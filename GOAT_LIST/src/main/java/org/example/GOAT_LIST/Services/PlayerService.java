@@ -13,7 +13,7 @@ public class PlayerService {
     @Autowired
     private PlayerRepo playerRepo;
 
-    public Players readPlayer(int playerId) {
+    public Players readPlayer(Long playerId) {
 
         return playerRepo.findPlayersByPlayerId(playerId);
     }

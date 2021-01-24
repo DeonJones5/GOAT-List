@@ -6,8 +6,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface StatsRepo extends CrudRepository<Stats, Integer> {
-    Stats findStatsByPlayerId(int StatsID);
+public interface StatsRepo extends CrudRepository<Stats, Long> {
+    Stats findStatsByPlayerId(Long StatsID);
 
     Stats findStatsByName (String name);
 }
