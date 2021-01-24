@@ -48,6 +48,16 @@ public class PlayerController {
         return new ResponseEntity<>(playerService.playerExist(name), HttpStatus.OK);
     }
 
+    @GetMapping("orderByChamps")
+    public ResponseEntity<List<Players>> orderByChamps(){
+        return new ResponseEntity<>(playerService.findAllByOrderByChampionships(), HttpStatus.OK);
+    }
+
+//    @GetMapping("joinWithStats")
+//    public ResponseEntity<List<Players>> joinWithStats(){
+//        return new ResponseEntity<List<Players>>(playerService.testSelectedQuery(), HttpStatus.OK);
+//    }
+
 
 //    @GetMapping("allStarAppearances/{allStar}")
 //    public ResponseEntity<Players> allStarAppearances(@PathVariable int allStar){

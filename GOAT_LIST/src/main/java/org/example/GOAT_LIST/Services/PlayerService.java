@@ -37,6 +37,14 @@ public class PlayerService {
 
     public Boolean playerExist(String name){ return playerRepo.existsByName(name);}
 
+    public List<Players> findAllByOrderByChampionships(){
+        return playerRepo.findAllByOrderByChampionships();
+    }
+
+//    public List<Players> testSelectedQuery(){
+//        return playerRepo.testSelectedQuery();
+//    }
+
 }
 
 
