@@ -53,6 +53,11 @@ public class PlayerController {
         return new ResponseEntity<>(playerService.findAllByOrderByChampionships(), HttpStatus.OK);
     }
 
+    @GetMapping("orderByName")
+    public ResponseEntity<List<Players>> orderByName(){
+        return new ResponseEntity<>(playerService.findAllByOrderOfName(), HttpStatus.OK);
+    }
+
 //    @GetMapping("joinWithStats")
 //    public ResponseEntity<List<Players>> joinWithStats(){
 //        return new ResponseEntity<List<Players>>(playerService.testSelectedQuery(), HttpStatus.OK);

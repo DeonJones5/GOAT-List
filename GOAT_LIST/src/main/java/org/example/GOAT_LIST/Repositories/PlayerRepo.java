@@ -19,12 +19,18 @@ public interface PlayerRepo extends CrudRepository<Players, Long> {
 
     Boolean existsByName(String name);
 
-//    @Query("FROM Players p JOIN Stats s ON p.playerId = s.playerId")
-//    List<Players> testSelectedQuery();
-
     @Query("FROM Players ORDER BY Championships DESC")
     List<Players> findAllByOrderByChampionships();
 
+    @Query("FROM Players ORDER BY Name ASC")
+    List<Players> findAllByOrderByName();
+
+//    @Query("FROM Players WHERE UPPER(Name) LIKE CONCAT('^', UPPER(?1), '%')")
+//    List<Players> findAllByOrderByName(String name);
+
+
+//    @Query("FROM Players p JOIN Stats s ON p.playerId = s.playerId")
+//    List<Players> testSelectedQuery();
 
 
 //    Players findPlayersByAllStar(int allStar);

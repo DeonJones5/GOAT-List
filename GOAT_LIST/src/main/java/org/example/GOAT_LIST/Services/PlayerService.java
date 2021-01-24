@@ -41,6 +41,14 @@ public class PlayerService {
         return playerRepo.findAllByOrderByChampionships();
     }
 
+    public List<Players> findAllByOrderOfName(){
+        return playerRepo.findAllByOrderByName();
+    }
+
+//    public List<Players> findAllByOrderOfName(String name){
+//        return playerRepo.findAllByOrderByName(name);
+//    }
+
 //    public List<Players> testSelectedQuery(){
 //        return playerRepo.testSelectedQuery();
 //    }
